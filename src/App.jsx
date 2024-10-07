@@ -3,9 +3,9 @@ import { useState,useEffect } from 'react'
 import {useDispatch} from 'react-redux'
 import authService from "./appwrite/auth"
 import { logout } from "./store/authSlice"
-
+import {Header,Footer} from './components'
 import './App.css'
-import Footer from './components/footer/Footer'
+
 import { Outlet } from 'react-router-dom'
 
 function App() {
@@ -28,7 +28,7 @@ authService.getCurrentUser()
  return !loading? (
   <div className='min-h-screen flex flex-wrap content-between bg-gray-400'>
     <div className='w-full block '>
-      <Headers/>
+      <Header/>
       <main>
         {/* <Outlet/> */}
         todo
